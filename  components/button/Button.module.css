@@ -1,0 +1,41 @@
+.button {
+    border-radius: 20px;
+    font-weight: 500;
+    border: 2px solid var(--sky-color);
+    transition: all .3s;
+    width: fit-content;
+    color: var(--text-color);
+    background-color: var(--sky-color);
+    padding: 8px 16px;
+    font-size: 20px;
+}
+
+.button:hover {
+    opacity: .8;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.secondary {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.large {
+    font-size: 24px;
+    padding: 12px 20px;
+}
+
+.outline {
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}

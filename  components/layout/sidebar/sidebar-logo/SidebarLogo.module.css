@@ -1,0 +1,16 @@
+.sidebar-logo {
+    cursor: pointer;
+    height: 56px;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 300ms;
+    margin-bottom: 20px;
+    transition: all .3s;
+}
+
+.sidebar-logo:hover {
+    background-color: var(--hover-bg-color);
+}

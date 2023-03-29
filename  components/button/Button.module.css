@@ -8,7 +8,9 @@
     background-color: var(--sky-color);
     padding: 8px 16px;
     font-size: 16px;
+    cursor: pointer;
 }
+
 
 .button:hover {
     opacity: .8;

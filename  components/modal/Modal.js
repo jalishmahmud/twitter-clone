@@ -38,7 +38,7 @@ export default function Modal({
             {/* header */}
             <div className={styles["header"]}>
               <h3 className={styles["title"]}>{title}</h3>
-              <button className={styles["close-icon"]}>
+              <button onClick={handleClose} className={styles["close-icon"]}>
                 <AiOutlineClose size={20} />
               </button>
             </div>

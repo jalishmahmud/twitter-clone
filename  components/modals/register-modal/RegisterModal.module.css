@@ -1,0 +1,20 @@
+.login-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-content {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--silver-color)
+}
+
+.toggle-text {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.toggle-text:hover {
+    text-decoration: underline;
+}

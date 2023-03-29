@@ -1,14 +1,17 @@
 import styles from "./SidebarTweetButton.module.css";
 import { FaFeather } from "react-icons/fa";
 import { useRouter } from "next/router";
+import useLoginModal from "@/hooks/useLoginModal";
+import { useCallback } from "react";
 
 export default function SidebarTweetButton() {
   const router = useRouter();
+  const loginModal = useLoginModal();
+  const onClick = useCallback(() => {
+    loginModal.onOpen();
+  }, [loginModal]);
   return (
-    <div
-      onClick={() => router.push("/")}
-      className={styles["sidebar-tweet-button"]}
-    >
+    <div onClick={onClick} className={styles["sidebar-tweet-button"]}>
       <div className={styles["sidebar-tweet-button"]}>
         <div className={styles["icon"]}>
           <p>{"Tweet"}</p>

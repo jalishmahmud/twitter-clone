@@ -1,0 +1,21 @@
+.input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    color: var(--text-color);
+    transition: all .3s;
+    background-color: transparent;
+}
+
+.input:focus {
+    border: 2px solid var(--sky-color);
+}
+
+.disabled {
+    background-color: var(--primary-color);
+    opacity: .7;
+    cursor: not-allowed
+}

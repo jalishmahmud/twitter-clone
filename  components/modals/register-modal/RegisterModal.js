@@ -4,6 +4,9 @@ import React, { useCallback, useState } from "react";
 import Input from "../../input/Input";
 import Modal from "../../modal/Modal";
 import styles from "./RegisterModal.module.css";
+import axios from "axios";
+import { toast } from "react-hot-toast";
+import { signIn } from "next-auth/react";
 export default function RegisterModal() {
   const LoginModal = useLoginModal();
   const RegisterModal = useRegisterModal();
@@ -24,15 +27,27 @@ export default function RegisterModal() {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoading(true);
-      // TODO: register add login
+      await axios.post("/api/register", {
+        email,
+        password,
+        username,
+        name,
+      });
+      toast.success("Account created");
+
+      signIn("credentials", {
+        email,
+        password,
+      });
 
       RegisterModal.onClose();
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
     }
-  }, [RegisterModal]);
+  }, [RegisterModal, email, password, username, name]);
 
   const bodyContent = (
     <div className={styles["login-body"]}>

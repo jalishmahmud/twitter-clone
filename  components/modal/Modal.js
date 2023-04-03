@@ -50,7 +50,7 @@ export default function Modal({
                 secondary
                 fullWidth
                 large
-                onClick={handleSubmit}
+                callBack={handleSubmit}
               />
               {footer}
             </div>

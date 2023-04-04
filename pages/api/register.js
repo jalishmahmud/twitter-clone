@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         email,
         username,
         name,
-        password,
+        hashedPassword,
       },
     });
     console.log("user", user);
